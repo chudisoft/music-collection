@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MusicList.css';
 import Music from './Music';
 import { fetchMusicList } from '../../redux/musiclist/musiclistSlice';
+import { Col, Row } from 'react-bootstrap';
 
 function MusicList({ category }) {  
   const error = useSelector((state) => state.musiclist.error);
@@ -11,7 +12,7 @@ function MusicList({ category }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMusicList(category));
+    dispatch(fetchMusicList('Jazz'));
   }, []);
 
   return (
@@ -20,27 +21,27 @@ function MusicList({ category }) {
       <div className='musiclist'>
         <h1>Music List</h1>
       </div>
-      <div className='musiclist'>
+      <Row>
         {
-          // musiclistAvailable.map((g) => 
-          //   <div className='artist'>
-          //     <div className="artist-header">
-          //       <h3>{Object.keys(musiclistAvailable)[musiclistAvailable.indexOf(g)]}</h3>
-          //     </div>
-          //     <div className="artist-content">
-          //       {
-          //         {...g}.map((m) => 
-          //           <Music 
-          //             music={m}
-          //             key={m.musiclist_id}
-          //           />
-          //         )
-          //       }
-          //     </div>
-          //   </div>
-          // )
+          Object.keys(musiclistAvailable).map((g) => 
+            <Col sm={'4'}>
+              <div className="artist-header">
+                <h3>{g}</h3>
+              </div>
+              <Row>
+                {
+                  musiclistAvailable[g].map((m) => 
+                    <Music 
+                      music={m}
+                      key={m.musiclist_id}
+                    />
+                  )
+                }
+            </Row>
+              </Col>
+          )
         }
-      </div>
+      </Row>
     </div>
   )
 }

@@ -76,10 +76,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .musiclist {
-    display: none;
-  }
-
   .mission-table {
     display: block;
     border-collapse: collapse;

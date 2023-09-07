@@ -9,13 +9,17 @@ const Music = ({ music }) => {
   return (
     <div className="music">
       <h4 className="music-title">
-        <span>{music.title}</span>
+        <a href={music.url} className="" target="blank">{music.name}</a>
       </h4>
       <p className="music-description">
-        <img src={music.album.cover_small} alt={music.album.title} />
-        <span className="rigth">{music.duration}</span>
-        <a href={music.album.tracklist} className="" target="blank">{music.album.title}</a>
-        <video src={music.preview}></video>
+        {/* {
+          music.image.map((x) =>
+            <img src={x['#text']} alt={music.name} />
+          )
+        } */}
+        <img src={music.image[0]['#text']} alt={music.name} />
+        <span className="rigth">{music.listeners}</span>
+        {/* <video src={music.preview}></video> */}
       </p>
     </div>
   );

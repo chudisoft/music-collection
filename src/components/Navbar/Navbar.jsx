@@ -1,12 +1,21 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { logo } from "../../assets";
-import { links } from "../../constants/constants";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const linkRef = useRef();
   const menuRef = useRef();
+  const links = [
+    {
+      name: 'Home',
+      path: '/'
+    },
+    // {
+    //   name: 'Home',
+    //   path: '/'
+    // },
+  ]
 
   const handleClick = () => {
     linkRef.current.classList.add("active");

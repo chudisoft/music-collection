@@ -1,11 +1,12 @@
 import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, useParams } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ErrorPage from './routes/error-page';
 import store from './redux/store';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Categories from './components/Categories/Categories';
 import MusicList from './components/MusicList/MusicList';
 
