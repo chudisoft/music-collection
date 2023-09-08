@@ -13,9 +13,10 @@ import Loader from "../Loader/Loader";
 function MusicList({ category }) {
   const dispatch = useDispatch();
   const [ pageNumber, setPageNumber ] = useState(0);
-  const [ countPerPage, setCountPerPage ] = useState(15);
+  const [ pageCount, setPageCount ] = useState(0);
   const [ searchValue, setSearchValue ] = useState('');
   const [ filteredMusic, setFilteredMusic ] = useState([]);
+  const countPerPage = 20;
   const loading = useSelector((state) => state.musiclist.loading);
   const error = useSelector((state) => state.musiclist.error);
   const musiclistAvailable = useSelector((state) => state.musiclist.musiclist);
@@ -23,6 +24,10 @@ function MusicList({ category }) {
   useEffect(() => {
     dispatch(fetchMusicList(category));
   }, []);
+
+  useEffect(() => {
+    setPageCount(Math.ceil(Object.keys(filteredMusic).length / countPerPage));
+  }, [filteredMusic]);
 
   useEffect(() => {
     // Filter objects by keys matching searchValue
@@ -43,12 +48,9 @@ function MusicList({ category }) {
   const pagesVisited = () => {
     return pageNumber * countPerPage;
   };
-  const pageCount = () => {
-    return Math.ceil(filteredMusic.length / countPerPage);
-  };
 
   const changePage = ({ selected }) => {
-    alert(selected);
+    console.log(`Selected Page: ${selected}`);
     setPageNumber(selected);
   };
 
@@ -58,9 +60,14 @@ function MusicList({ category }) {
     );
   
 
+  if(loading === 'failed') 
+    return (
+      <div className="text-warning p-2 m-2">{error}</div>
+    );
+  
+
   return (
     <div className="w-100 p-4">
-      <div className="text-warning p-2 m-2">{error}</div>
       <div className="form-group col-12 float-end mb-2">
         <div className="input-group">
           <input
@@ -116,10 +123,10 @@ function MusicList({ category }) {
         nextLabel={"Next"}
         pageCount={pageCount}
         onPageChange={changePage}
-        previousLinkClassName={"btn btn-sm btn-primary"}
-        nextLinkClassName={"btn btn-sm btn-primary"}
-        activeClassName={"btn btn-sm btn-primary"}
-        disabledClassName={"btn btn-sm disabled"}
+        previousLinkClassName={"btn-prev"}
+        nextLinkClassName={"btn-next"}
+        activeClassName={"btn-active"}
+        disabledClassName={"disabled"}
         breakLabel="..."
         breakClassName="break-me"
         marginPagesDisplayed={2}

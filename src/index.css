@@ -132,6 +132,44 @@ footer {
   position: absolute;
 }
 
+/* Style for non-active number buttons */
+.pagination a {
+  display: inline-block;
+  margin-right: 4px; /* Adjust spacing between buttons */
+  padding: 4px 8px; /* Adjust button padding */
+  border: 1px solid #ccc; /* Add a border */
+  background-color: #f7f7f7; /* Background color */
+  color: #333; /* Text color */
+  cursor: pointer;
+  border-radius: 4px; /* Add rounded corners */
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transitions */
+
+  /* Add hover styles */
+  &:hover {
+    background-color: #333; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+  }
+}
+
+.btn-prev a {
+  background-color: #a2a3a3;
+}
+
+.btn-next a {
+  background-color: #0290ff;
+}
+
+.btn-active a {
+  background-color: #0290ff;
+}
+
+/* Style for the active number button */
+.page-item.active {
+  background-color: #333; /* Active button background color */
+  color: #fff; /* Active button text color */
+}
+
+
 @media screen and (min-width: 600px) {
   .navbar__logo {
     font-size: 0.8rem;
