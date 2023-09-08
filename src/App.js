@@ -8,6 +8,9 @@ function App() {
       <div className="container">
         <Outlet />
       </div>
+      <footer>
+        <p>Copyright &copy; 2023 Chudisoft. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

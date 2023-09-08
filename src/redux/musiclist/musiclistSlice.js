@@ -13,13 +13,8 @@ const fetchMusicList = createAsyncThunk(
   async (category) => {
     try {
       // Retrieve state from localStorage
-      console.log(category);
-
-      const response = await fetch(`${baseApiUrl}&method=track.search&limit=30&track=${category}`);
+      const response = await fetch(`${baseApiUrl}&method=track.search&limit=50&track=${category}`);
       const result = await response.json();
-
-      console.log('result:');
-      console.log(result.results.trackmatches.track);
       const groupedData = result.results.trackmatches.track.reduce((groups, item) => {
         const artistName = item.artist;
 
@@ -34,16 +29,6 @@ const fetchMusicList = createAsyncThunk(
 
         return groups;
       }, {});
-
-      // Now, 'groupedData' will be an object with artist names as keys and
-      // arrays of objects as values.
-      console.log(groupedData);
-      Object.keys(groupedData).forEach((g) => {
-        console.log(g);
-        groupedData[g].forEach((m) => {
-          console.log(m);
-        });
-      });
       return groupedData;
     } catch (error) {
       console.log(error.message);
@@ -73,9 +58,9 @@ export const musiclistSlice = createSlice({
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(fetchMusicList.pending, (state) => {
-      state.status = 'loading';
+      state.loading = 'loading';
     }).addCase(fetchMusicList.fulfilled, (state, action) => {
-      state.status = 'succeeded';
+      state.loading = 'succeeded';
       if (action.payload !== '') {
         state.musiclist = action.payload;
         if (state.musiclist.length === 0) state.error = 'No result was found!';
@@ -83,7 +68,7 @@ export const musiclistSlice = createSlice({
         state.error = 'No result was found!';
       }
     }).addCase(fetchMusicList.rejected, (state, action) => {
-      state.status = 'failed';
+      state.loading = 'failed';
       state.error = action.error.message;
     });
   },

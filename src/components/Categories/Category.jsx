@@ -10,8 +10,8 @@ const Category = ({ category }) => {
     <div className="category">
       <a href={`/Music-List/${category.title}`}>
         <img src={`../Categories/${category.class}.jpg`} />
-        <h4 className="category-name">
-          <span>{category.title}</span>
+        <h4 className="text-center">
+          <span className="text-light">{category.title}</span>
         </h4>
       </a>
     </div>

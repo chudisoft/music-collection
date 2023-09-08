@@ -9,19 +9,19 @@ function Categories() {
   const categorysAvailable = useSelector((state) => state.categories.categories);
 
   return (
-    <div className='w-100 p-4'>
-      <div className='categorys'>
-        <h2>Music Categories</h2>
+    <div className=''>
+      <div hidden className='categorys text-light bg-secondary p-2 m-0 mb-2'>
+        <p>Select music category to view its music collections</p>
       </div>
-      <Row className='categorys'>
+      <Row className='categorys gap-2'>
         {
           categorysAvailable.map((b) => 
-            <Col sm={'6'}>
+            <div className='bg-dark text-light p-2 shadow card col-sm-6 col-md-4'>
               <Category 
                 category={b}
                 key={b.name}
               />
-            </Col>
+            </div>
           )
         }
       </Row>

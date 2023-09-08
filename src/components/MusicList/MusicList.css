@@ -1,110 +1,23 @@
-.musiclist {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  grid-gap: 0;
-  gap: 0;
+.music-title {
+  display: block;
+  width: 100%;
 }
 
-.mission {
-  border-radius: 4px;
-  border: 1px solid #e8e8e8;
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.music {
+  display: inline-flex;
+  padding-top: 0.5em;
+  width: 100%;
 }
 
-.mission-description {
-  padding: 0.5em 0;
+.music:nth-child(n + 2) {
+  border-top: #363636 solid 1px;
 }
 
-.mission:nth-child(odd),
-.mission-table tr:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-
-.mission:hover,
-.mission-table tr:hover {
-  background-color: #f3f3f3;
-  border: 1px solid #14b1e0;
-}
-
-.join,
-.leave {
-  padding: 0.3em 0.5em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.join {
-  border-color: #949495;
-  color: #949495;
-  background-color: unset;
-}
-
-.leave {
-  border-color: #f14d1b;
-  color: #f14d1b;
-  background-color: unset;
-}
-
-.action-buttons {
-  margin-top: 1em;
-}
-
-.mission-not-reserved,
-.mission-reserved {
-  color: #fff;
-  padding: 0.1em 0.5em;
-  border-radius: 10px;
-}
-
-.mission-not-reserved {
-  background-color: #949495;
-}
-
-.mission-reserved {
-  background-color: #3f75c8;
-}
-
-.mission-table {
-  display: none;
+.music:hover {
+  background-color: #363636;
 }
 
 @media only screen and (min-width: 768px) {
-  .mission-table {
-    display: block;
-    border-collapse: collapse;
-  }
-
-  .mission-table th,
-  .mission-table td {
-    border: 1px solid;
-    padding: 1em 0.5em;
-  }
-
-  .mission-table thead {
-    text-align: left;
-  }
-
-  .mission {
-    flex-direction: row;
-    flex-wrap: unset;
-    padding: 0;
-  }
-
-  .mission-status {
-    width: 18%;
-  }
-
-  .mission-button {
-    width: 10%;
-  }
-
   .mission-name {
     width: 20%;
   }

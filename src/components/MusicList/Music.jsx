@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeadphones, faPlay } from '@fortawesome/fontawesome-free-solid';
 
 const Music = ({ music }) => {
   Music.propTypes = {
@@ -8,19 +10,12 @@ const Music = ({ music }) => {
 
   return (
     <div className="music">
-      <h4 className="music-title">
+      <h6 className="music-title">
         <a href={music.url} className="" target="blank">{music.name}</a>
-      </h4>
-      <p className="music-description">
-        {/* {
-          music.image.map((x) =>
-            <img src={x['#text']} alt={music.name} />
-          )
-        } */}
-        <img src={music.image[0]['#text']} alt={music.name} />
-        <span className="rigth">{music.listeners}</span>
-        {/* <video src={music.preview}></video> */}
-      </p>
+        <span className="float-end text-light">
+          <FontAwesomeIcon icon={faHeadphones} /> {Number(music.listeners).toLocaleString()}
+        </span>
+      </h6>
     </div>
   );
 };
