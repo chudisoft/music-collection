@@ -95,7 +95,6 @@ It also allows the student to showcase what they can do to the future employee.
 ## 🚀 Project Presentation <a name="project-presentation"></a>
 
 > This project will is presented at [Loom](https://www.loom.com/share/ae048d35e4634003a5c8705ddcda7fa9?sid=25bee10d-3b33-4789-9588-ca18d9ec6e46).
-<div style="position: relative; padding-bottom: 56.22254758418741%; height: 0;"><iframe src="https://www.loom.com/embed/ae048d35e4634003a5c8705ddcda7fa9?sid=423b3057-4d3b-42e2-87c7-d1114846cc82" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
