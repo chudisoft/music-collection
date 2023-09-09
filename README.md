@@ -94,7 +94,7 @@ It also allows the student to showcase what they can do to the future employee.
 
 ## 🚀 Project Presentation <a name="project-presentation"></a>
 
-> This project will is presented at [Loom](https://www.loom.com/share/ae048d35e4634003a5c8705ddcda7fa9?sid=25bee10d-3b33-4789-9588-ca18d9ec6e46).
+> This project is presented at [Loom](https://www.loom.com/share/ae048d35e4634003a5c8705ddcda7fa9?sid=25bee10d-3b33-4789-9588-ca18d9ec6e46).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
