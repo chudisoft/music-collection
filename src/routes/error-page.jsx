@@ -7,7 +7,8 @@ export default function ErrorPage() {
   return (
     <div
       id="error-page"
-      className="d-flex justify-content-center text-success fa-4x text-center m-4 p-4 card">
+      className="d-flex justify-content-center text-success fa-4x text-center m-4 p-4 card"
+    >
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
