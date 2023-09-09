@@ -29,11 +29,13 @@ function Categories() {
     <div className=''>
       <div className='categories-header'>
         <i>Select music category to view its music collections</i>
-        <i className=' float-end btn text-light fa fa-cog'
-          title='Toggle Search'
-          onClick={() => setShowSearch(!showSearch)}
-        >
-        </i>
+        <span className='float-end pointer text-light'>
+          <i className='fas fa-cogs'
+            title='Toggle Search'
+            onClick={() => setShowSearch(!showSearch)}
+          >
+          </i>
+        </span>
       </div>
       {showSearch && (<div className="search-container">
         <div className="form-group">

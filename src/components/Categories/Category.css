@@ -62,6 +62,10 @@
   width: 30%;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
   .category {
     flex-direction: row;
