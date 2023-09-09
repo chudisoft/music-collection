@@ -18,6 +18,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .form-control {
+    min-width: 20vw !important;
+  }
+
   .mission-name {
     width: 20%;
   }

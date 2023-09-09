@@ -8,8 +8,35 @@
   text-decoration: none;
 }
 
+.categories-header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4d3a3a;
+  color: #fff;
+  justify-content: space-between;
+  padding: 0.5em;
+  margin-bottom: 0.1em;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0.1em;
+}
+
 .category {
   max-height: 15em;
+  /* background-color: #14b1e0; */
+}
+
+.category-container {
+  background-color: #000;
+}
+
+.category-container:nth-child(even) {
+  background-color: #4d3a3a;
 }
 
 .category img {

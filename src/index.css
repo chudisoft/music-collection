@@ -37,7 +37,7 @@ code {
 }
 
 .container {
-  padding: 2em 1em;
+  padding: 2em 0 !important;
 }
 
 .navbar__header {
@@ -50,6 +50,10 @@ code {
   background-color: #000;
   color: #fff;
   border-bottom: #fff solid 1px;
+}
+
+.body {
+  min-height: 80vh;
 }
 
 footer {
@@ -197,4 +201,9 @@ footer {
   .navbar__header {
     padding: 0 2rem;
   }
+  
+  .container {
+    padding: 2em 1em !important;
+  }
+
 }

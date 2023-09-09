@@ -6,7 +6,7 @@ import "./MusicList.css";
 import Music from "./Music";
 import { fetchMusicList } from "../../redux/musiclist/musiclistSlice";
 import { Col, Row } from "react-bootstrap";
-import { faSearch } from "@fortawesome/fontawesome-free-solid";
+import { faBackward, faSearch } from "@fortawesome/fontawesome-free-solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loader from "../Loader/Loader";
 
@@ -61,39 +61,49 @@ function MusicList({ category }) {
 
   if(loading === 'failed') 
     return (
-      <div className="text-warning p-2 m-2">{error}</div>
+      <div
+        className="text-warning d-flex justify-content-center text-center m-4 p-4 card"
+      >
+        {error}
+      </div>
     );
   
 
   return (
     <div className="w-100 p-4">
-      <div className="form-group col-12 float-end mb-2">
-        <div className="input-group">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search by artist, genre, release"
-            value={searchValue}
-            onChange={(e) => {
-              setSearchValue(e.target.value);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                // Cancel the default action, if needed
-                e.preventDefault();
-                // Trigger the button element with a click
+      <div className="col-12 mb-2 d-flex justify-content-center">
+        <div className="form-group">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search by artist, genre, release"
+              value={searchValue}
+              onChange={(e) => {
                 setSearchValue(e.target.value);
-              }
-            }}
-          />
-          <span
-            className="input-group-text btn btn-primary"
-            onClick={(e) => {
-              setSearchValue(searchValue);
-            }}
-          >
-            <FontAwesomeIcon icon={faSearch} />
-          </span>
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  // Cancel the default action, if needed
+                  e.preventDefault();
+                  // Trigger the button element with a click
+                  setSearchValue(e.target.value);
+                }
+              }}
+            />
+            <span
+              className="input-group-text btn btn-primary"
+              onClick={(e) => {
+                setSearchValue(searchValue);
+              }}
+            >
+              <FontAwesomeIcon icon={faSearch} />
+            </span>
+            <a href="../" className="btn btn-sm btn-secondary">
+              Go Back
+              <FontAwesomeIcon icon={faBackward} className="ms-2"/>
+            </a>
+          </div>
         </div>
       </div>
       <Row className="gap-2 justify-content-center">
