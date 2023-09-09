@@ -23,7 +23,7 @@ const initialState = {
       class: 'Jazz',
     },
     {
-      title: 'Hip-Hop/Rap',
+      title: 'Hip-Hop',
       description: 'Features spoken word poetry and a strong rhythmic element, often with electronic beats.',
       class: 'Rap',
     },
