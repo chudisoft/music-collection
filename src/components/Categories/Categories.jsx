@@ -16,7 +16,9 @@ function Categories() {
       <Row className='categorys gap-2'>
         {
           categorysAvailable.map((b) => 
-            <div className='bg-dark text-light p-2 shadow card col-sm-6 col-md-4'>
+            <div
+              className='bg-dark text-light p-2 shadow card col-sm-6 col-md-4'
+              key={b.description}>
               <Category 
                 category={b}
                 key={b.name}

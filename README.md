@@ -73,6 +73,8 @@ It also allows the student to showcase what they can do to the future employee.
 - **[HTML Forms]**
 - **[CSS Flex/Grid]**
 - **[CSS Mobile First Design Approch]**
+- **[React]**
+- **[Redux]**
 - **[Git Branch]**
 - **[.gitignore file]**
 
@@ -82,8 +84,7 @@ It also allows the student to showcase what they can do to the future employee.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- > This Project is deployed at [render.com](https://metrics-webapp-3c90.onrender.com) -->
-> This Project is yet to be deployed.
+> This Project is deployed at [render.com](https://metrics-webapp-egq7.onrender.com)
 
 <!-- - [Live Demo Link](https://google.com) -->
 
@@ -93,7 +94,8 @@ It also allows the student to showcase what they can do to the future employee.
 
 ## 🚀 Project Presentation <a name="project-presentation"></a>
 
-> This project will be presented in the future.
+> This project will is presented at [Loom](https://www.loom.com/share/ae048d35e4634003a5c8705ddcda7fa9?sid=25bee10d-3b33-4789-9588-ca18d9ec6e46).
+<div style="position: relative; padding-bottom: 56.22254758418741%; height: 0;"><iframe src="https://www.loom.com/embed/ae048d35e4634003a5c8705ddcda7fa9?sid=423b3057-4d3b-42e2-87c7-d1114846cc82" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,7 +164,7 @@ your server.
 
 > Features I will add to the project are:
 
-- [ ] **[API integration]**
+- [ ] **[Error Notification using react notifier]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +205,7 @@ I would like to thank microverse for this __wonderful__ opportunity.
 
 - **[What languages where used?]**
 
-  - [Html5, Javascript, and CSS]
+  - [React, Redux, Html5, Javascript, and CSS]
 
 - **[What git control system was used?]**
 
