@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const baseApiUrl = 'http://ws.audioscrobbler.com/2.0/?api_key=aa5707fcdf87f9267f083a38c593bfd5&format=json&';
+const baseApiUrl = 'https://ws.audioscrobbler.com/2.0/?api_key=aa5707fcdf87f9267f083a38c593bfd5&format=json&';
 
 // First, create the thunk
 const fetchMusicList = createAsyncThunk(
