@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeadphones, faPlay } from '@fortawesome/fontawesome-free-solid';
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
@@ -40,7 +38,7 @@ const Navbar = () => {
     <header className="navbar__header">
       <div className="navbar__logo">
         {/* <img src={logo} alt="planet" /> */}
-        <FontAwesomeIcon icon={faHeadphones} className="fa fa-4x text-primary"/>
+        <i className=' fa fa-4x text-primary fa-headphones'></i>
         <h1 className="text-light">Music Collections</h1>
       </div>
       <nav className="navbar__links" ref={linkRef}>

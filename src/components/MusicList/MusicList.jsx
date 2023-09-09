@@ -6,8 +6,6 @@ import "./MusicList.css";
 import Music from "./Music";
 import { fetchMusicList } from "../../redux/musiclist/musiclistSlice";
 import { Col, Row } from "react-bootstrap";
-import { faBackward, faSearch } from "@fortawesome/fontawesome-free-solid";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loader from "../Loader/Loader";
 
 function MusicList({ category }) {
@@ -97,11 +95,16 @@ function MusicList({ category }) {
                 setSearchValue(searchValue);
               }}
             >
-              <FontAwesomeIcon icon={faSearch} />
+              <i className='fa fa-search'
+                title='Toggle Search'
+              >
+              </i>
             </span>
             <a href="../" className="btn btn-sm btn-secondary">
               Go Back
-              <FontAwesomeIcon icon={faBackward} className="ms-2"/>
+              <i className='fa fa-backward ms-2'
+              >
+              </i>
             </a>
           </div>
         </div>

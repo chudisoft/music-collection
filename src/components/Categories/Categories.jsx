@@ -4,8 +4,6 @@ import Category from './Category';
 import { useSelector } from 'react-redux';
 import './Category.css';
 import { Col, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSearch, faToolbox } from '@fortawesome/fontawesome-free-solid';
 
 function Categories() {
   const categorysAvailable = useSelector((state) => state.categories.categories);
@@ -31,13 +29,10 @@ function Categories() {
     <div className=''>
       <div className='categories-header'>
         <i>Select music category to view its music collections</i>
-        <i className=' float-end'>
-          <FontAwesomeIcon
-            icon={faCog}
-            className='btn text-light'
-            title='Toggle Search'
-            onClick={() => setShowSearch(!showSearch)}
-          />
+        <i className=' float-end btn text-light fa fa-cog'
+          title='Toggle Search'
+          onClick={() => setShowSearch(!showSearch)}
+        >
         </i>
       </div>
       {showSearch && (<div className="search-container">
@@ -66,7 +61,10 @@ function Categories() {
                 setSearchValue(searchValue);
               }}
             >
-              <FontAwesomeIcon icon={faSearch} />
+              <i className='fa fa-search'
+                title='Search'
+              >
+              </i>
             </span>
           </div>
         </div>
