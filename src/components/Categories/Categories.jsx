@@ -30,15 +30,15 @@ function Categories() {
   return (
     <div className=''>
       <div className='categories-header'>
-        <p className='mb-0'>Select music category to view its music collections</p>
-        <p className='mb-0'>
+        <i>Select music category to view its music collections</i>
+        <i className=' float-end'>
           <FontAwesomeIcon
             icon={faCog}
             className='btn text-light'
             title='Toggle Search'
             onClick={() => setShowSearch(!showSearch)}
           />
-        </p>
+        </i>
       </div>
       {showSearch && (<div className="search-container">
         <div className="form-group">
@@ -75,7 +75,7 @@ function Categories() {
         {
           filteredCategory.map((b) => 
             <div
-              className='category-container text-light p-2 shadow card col-sm-6 col-md-4'
+              className={`category-container ${b.class} text-light p-2 shadow card col-sm-6 col-md-4`}
               key={b.description}>
               <Category 
                 category={b}

@@ -9,11 +9,8 @@
 }
 
 .categories-header {
-  display: flex;
-  flex-wrap: wrap;
   background-color: #4d3a3a;
   color: #fff;
-  justify-content: space-between;
   padding: 0.5em;
   margin-bottom: 0.1em;
 }
@@ -37,7 +34,7 @@
   border: #acacac solid 1px;
 }
 
-.category-container:nth-child(even) {
+.c-dim {
   background-color: #4d3a3a;
 }
 
@@ -70,5 +67,9 @@
     flex-direction: row;
     flex-wrap: unset;
     padding: 0;
+  }
+
+  .col-md-4 {
+    width: 25%;
   }
 }

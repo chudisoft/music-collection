@@ -9,7 +9,7 @@ const Category = ({ category }) => {
   return (
     <div className="category">
       <a href={`/Music-List/${category.title}`}>
-        <img src={`../Categories/${category.class}.jpg`} />
+        <img src={`../Categories/${category.img}.jpg`} />
         <h4 className="text-center">
           <span className="text-light">{category.title}</span>
         </h4>

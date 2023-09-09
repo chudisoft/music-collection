@@ -84,7 +84,7 @@ It also allows the student to showcase what they can do to the future employee.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> This Project is deployed at [render.com](https://metrics-webapp-egq7.onrender.com)
+> This Project is deployed at [render.com](https://metrics-webapp-26cc.onrender.com)
 
 <!-- - [Live Demo Link](https://google.com) -->
 
