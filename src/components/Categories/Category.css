@@ -28,11 +28,13 @@
 
 .category {
   max-height: 15em;
+
   /* background-color: #14b1e0; */
 }
 
 .category-container {
   background-color: #000;
+  border: #acacac solid 1px;
 }
 
 .category-container:nth-child(even) {

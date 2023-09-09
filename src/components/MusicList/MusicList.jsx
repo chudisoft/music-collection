@@ -70,7 +70,7 @@ function MusicList({ category }) {
   
 
   return (
-    <div className="w-100 p-4">
+    <div>
       <div className="col-12 mb-2 d-flex justify-content-center">
         <div className="form-group">
           <div className="input-group">
@@ -106,14 +106,14 @@ function MusicList({ category }) {
           </div>
         </div>
       </div>
-      <Row className="gap-2 justify-content-center">
+      <Row className="categorys">
         {Object.keys(filteredMusic)
           .slice(pagesVisited(), pagesVisited() + countPerPage)
           .map((g) => (
             <Col
               sm={"6"}
               md={"4"}
-              className="bg-dark text-light p-2 shadow card"
+              className="category-container text-light p-2 shadow card"
               key={g}
             >
               <div className="artist-header">
