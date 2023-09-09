@@ -11,10 +11,6 @@ describe("Navbar component", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByAltText("planet")).toBeInTheDocument();
-    expect(screen.getByText("Space Travelers' Hub")).toBeInTheDocument();
-    expect(screen.getByText(/Rockets/i)).toBeInTheDocument();
-    expect(screen.getByText(/Missions/i)).toBeInTheDocument();
-    expect(screen.getByText(/My Profile/i)).toBeInTheDocument();
+    expect(screen.getByText(/Music Collections/)).toBeInTheDocument();
   });
 });

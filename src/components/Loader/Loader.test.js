@@ -1,20 +1,16 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Navbar from "./Loader";
+import Loader from "./Loader";
 
-describe("Navbar component", () => {
-  it("renders the logo and navigation links", () => {
+describe("Loader component", () => {
+  it("renders the loading message", () => {
     render(
       <MemoryRouter>
-        <Navbar />
+        <Loader />
       </MemoryRouter>
     );
 
-    expect(screen.getByAltText("planet")).toBeInTheDocument();
-    expect(screen.getByText("Space Travelers' Hub")).toBeInTheDocument();
-    expect(screen.getByText(/Rockets/i)).toBeInTheDocument();
-    expect(screen.getByText(/Missions/i)).toBeInTheDocument();
-    expect(screen.getByText(/My Profile/i)).toBeInTheDocument();
+    expect(screen.getByText(/Loading/)).toBeInTheDocument();
   });
 });

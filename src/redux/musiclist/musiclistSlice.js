@@ -1,11 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// eslint-disable-next-line import/no-extraneous-dependencies
-// import axios from 'axios';
 
 const baseApiUrl = 'http://ws.audioscrobbler.com/2.0/?api_key=aa5707fcdf87f9267f083a38c593bfd5&format=json&';
-// const response = await fetch('http://ws.audioscrobbler.com/2.0/?method=track.search&track=Rap&api_key=aa5707fcdf87f9267f083a38c593bfd5&format=json');
-// const response = await fetch('https://theaudiodb.com/api/v1/json/2/mvid.php?i=112024');
-// const response = await fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettoptags&artist=rap&api_key=aa5707fcdf87f9267f083a38c593bfd5&format=json');
 
 // First, create the thunk
 const fetchMusicList = createAsyncThunk(
@@ -31,7 +26,6 @@ const fetchMusicList = createAsyncThunk(
       }, {});
       return groupedData;
     } catch (error) {
-      console.log(error.message);
       return [...error.message];
     }
   },

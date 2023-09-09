@@ -50,13 +50,12 @@ function MusicList({ category }) {
   };
 
   const changePage = ({ selected }) => {
-    console.log(`Selected Page: ${selected}`);
     setPageNumber(selected);
   };
 
   if(loading === 'loading') 
     return (
-        <Loader />
+      <Loader />
     );
   
 
@@ -105,6 +104,7 @@ function MusicList({ category }) {
               sm={"6"}
               md={"4"}
               className="bg-dark text-light p-2 shadow card"
+              key={g}
             >
               <div className="artist-header">
                 <h5>{g}</h5>

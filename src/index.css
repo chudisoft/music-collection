@@ -59,7 +59,7 @@ footer {
   text-align: center;
   padding: 0 1rem;
   height: 4rem;
-  box-shadow: 0px -1px 1px rgb(241, 200, 19);
+  box-shadow: 0 -1px 1px rgb(241, 200, 19);
   background-color: #000;
   color: #fff;
   border-top: #fff solid 1px;
@@ -132,6 +132,18 @@ footer {
   position: absolute;
 }
 
+.btn-prev a {
+  background-color: #a2a3a3;
+}
+
+.btn-next a {
+  background-color: #0290ff;
+}
+
+.btn-active a {
+  background-color: #0290ff;
+}
+
 /* Style for non-active number buttons */
 .pagination a {
   display: inline-block;
@@ -151,24 +163,11 @@ footer {
   }
 }
 
-.btn-prev a {
-  background-color: #a2a3a3;
-}
-
-.btn-next a {
-  background-color: #0290ff;
-}
-
-.btn-active a {
-  background-color: #0290ff;
-}
-
 /* Style for the active number button */
 .page-item.active {
   background-color: #333; /* Active button background color */
   color: #fff; /* Active button text color */
 }
-
 
 @media screen and (min-width: 600px) {
   .navbar__logo {
