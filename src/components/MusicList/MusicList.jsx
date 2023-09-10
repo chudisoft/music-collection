@@ -14,15 +14,18 @@ function MusicList() {
   const dispatch = useDispatch();
   const [ pageNumber, setPageNumber ] = useState(0);
   const [ pageCount, setPageCount ] = useState(0);
+  const [ sequence, setSequence ] = useState([]);
   const [ searchValue, setSearchValue ] = useState('');
   const [ filteredMusic, setFilteredMusic ] = useState([]);
-  const countPerPage = 20;
   const loading = useSelector((state) => state.musiclist.loading);
   const error = useSelector((state) => state.musiclist.error);
   const musiclistAvailable = useSelector((state) => state.musiclist.musiclist);
+  let count = 0;
+  const countPerPage = 20;
 
   useEffect(() => {
     dispatch(fetchMusicList(category));
+    setSequence(generateSequence(countPerPage));
   }, []);
 
   useEffect(() => {
@@ -45,11 +48,35 @@ function MusicList() {
     }
   }, [searchValue, musiclistAvailable, pageNumber]);
 
+  function generateSequence(length) {
+    const sequence = [];
+    let currentNumber = 2;
+  
+    for (let i = 0; i < length; i++) {
+      sequence.push(currentNumber);
+      if (i % 2 === 0) {
+        // If the index is even (0, 2, 4, ...), increment by 1.
+        currentNumber++;
+      } else {
+        // If the index is odd (1, 3, 5, ...), increment by 4.
+        currentNumber += 3;
+      }
+    }
+  
+    return sequence;
+  }
+  
+  const getStyle = () => {
+    count += 1;
+    return sequence.includes(count) ? 'c-dim' : '';
+  };
+
   const pagesVisited = () => {
     return pageNumber * countPerPage;
   };
 
   const changePage = ({ selected }) => {
+    count = 0;
     setPageNumber(selected);
   };
 
@@ -118,7 +145,7 @@ function MusicList() {
             <Col
               sm={"6"}
               md={"4"}
-              className="category-container text-light p-2 shadow card"
+              className={`category-container ${getStyle()} text-light p-2 shadow card`}
               key={g}
             >
               <div className="artist-header">

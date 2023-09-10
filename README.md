@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-  <h3><b>The Metrics-webapp Project</b></h3>
+  <h3><b>The Music Collection-webapp Project</b></h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -8,7 +8,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[metrics-webapp\] ](#--metrics-webapp-)
+- [📖 \[Music-Collection\] ](#--Music-Collection-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -31,13 +31,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [metrics-webapp] <a name="about-project"></a>
+# 📖 [Music-Collection] <a name="about-project"></a>
 
-> This project was created as part of Microverse module 3 week 4 tasks.
-It gives the student an opportunity to play around with HTML, CSS, React, and Redux.
+> This project was created as part of Microverse React redux capstone project.
+It gives the student an opportunity to showcase his talent with HTML, CSS, React, and Redux.
 It also allows the student to showcase what they can do to the future employee.
 
-**[metrics-webapp]** is a project that allows one to store and manage list of space travelers hub.
+**[Music-Collection]** is a project that allows a user to select a category of music and view the list of all songs in that category grouped by artists.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,10 +56,11 @@ It also allows the student to showcase what they can do to the future employee.
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></li>
-    <li><a href="https://html.com/">HTML</a></li>
+    <li><a href="https://html.com/">HTML5</a></li>
     <li><a href="https://js.org/">Javascript</a></li>
     <li><a href="https://js.org/">React</a></li>
     <li><a href="https://js.org/">Redux</a></li>
+    <li><a href="https://Bootstrap.org/">Bootstrap</a></li>
   </ul>
 </details>
 
@@ -71,10 +72,15 @@ It also allows the student to showcase what they can do to the future employee.
 
 - **[HTML Display Property]**
 - **[HTML Forms]**
-- **[CSS Flex/Grid]**
+- **[CSS Bootstrap]**
+- **[Fontawesome]**
 - **[CSS Mobile First Design Approch]**
 - **[React]**
 - **[Redux]**
+- **[React Route dom (v6)]**
+- **[React Pagenation]**
+- **[React Filter]**
+- **[API Counsumption]**
 - **[Git Branch]**
 - **[.gitignore file]**
 
@@ -84,7 +90,7 @@ It also allows the student to showcase what they can do to the future employee.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> This Project is deployed at [Render](https://metrics-webapp-vgvv.onrender.com)
+> This Project is deployed at [Netlify](https://jazzy-marzipan-52623a.netlify.app/)
 
 <!-- - [Live Demo Link](https://google.com) -->
 
@@ -138,7 +144,7 @@ For now no test is implemented.
 ### Deployment
 
 You can deploy this project using:
-Copying/uploading the project folder's contents to the root of 
+Copying/uploading the project's build folder's contents to the root of 
 your server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -163,7 +169,7 @@ your server.
 
 > Features I will add to the project are:
 
-- [ ] **[Error Notification using react notifier]**
+- [ ] **[Error Notification using react-toastify]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
