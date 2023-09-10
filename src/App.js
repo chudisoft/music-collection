@@ -1,10 +1,10 @@
 import {
-  Outlet,
-  Router,
-  useParams,
-  Routes,
+  BrowserRouter as Router,
   Route,
+  Routes,
+  Outlet,
 } from 'react-router-dom';
+
 // createBrowserRouter,
 // RouterProvider,
 import ErrorPage from './routes/error-page';
@@ -15,10 +15,10 @@ import Categories from './components/Categories/Categories';
 import MusicList from './components/MusicList/MusicList';
 
 function App() {
-  const GetMusicList = () => {
-    const { id } = useParams();
-    return <MusicList category={id} />;
-  };
+  // const GetMusicList = () => {
+  //   const { id } = useParams();
+  //   return <MusicList category={id} />;
+  // };
 
   // const View = () => (
   //   <div className="App">
@@ -62,7 +62,7 @@ function App() {
         <div className="container body">
           <Routes>
             <Route path="/" element={<Categories />} />
-            <Route path="/Music/:id" element={<GetMusicList />} />
+            <Route path="/Music/:category" element={<MusicList />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Outlet />

@@ -7,8 +7,10 @@ import Music from "./Music";
 import { fetchMusicList } from "../../redux/musiclist/musiclistSlice";
 import { Col, Row } from "react-bootstrap";
 import Loader from "../Loader/Loader";
+import { useParams } from "react-router-dom";
 
-function MusicList({ category }) {
+function MusicList() {
+  const { category } = useParams();
   const dispatch = useDispatch();
   const [ pageNumber, setPageNumber ] = useState(0);
   const [ pageCount, setPageCount ] = useState(0);
