@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <Categories />,
       },
       {
-        path: '/Music/:id',
+        path: '/music/:id',
         element: <GetMusiList />,
         // element: <MusicList category="pop-music" />,
       },
