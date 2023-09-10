@@ -32,7 +32,7 @@ const fetchMusicList = createAsyncThunk(
 );
 
 const initialState = {
-  musiclist: [],
+  musiclist: {},
   error: '',
   loading: 'idle', // 'idle' | 'pending' | 'succeeded' | 'failed'
 };
