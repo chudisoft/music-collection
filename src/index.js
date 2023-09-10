@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, useParams } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,12 +8,13 @@ import store from './redux/store';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categories from './components/Categories/Categories';
-// import MusicList from './components/MusicList/MusicList';
+import MusicList from './components/MusicList/MusicList';
 
-// const GetMusiList = () => {
-//   const { id } = useParams();
-//   return <MusicList category={id} />;
-// };
+const GetMusiList = () => {
+  const { id } = useParams();
+  if (id === '') return <MusicList category={id} />;
+  return <Categories />;
+};
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/Music/:id',
-        element: <Categories />,
-        // element: <GetMusiList />,
+        element: <GetMusiList />,
+        // element: <MusicList category="pop-music" />,
       },
       // {
       //   path: '/profile',
