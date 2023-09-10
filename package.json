@@ -1,5 +1,6 @@
 {
   "name": "metrics-webapp",
+  "homepage": "https://features--jazzy-marzipan-52623a.netlify.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
