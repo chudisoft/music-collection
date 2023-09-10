@@ -1,0 +1,28 @@
+.music-title {
+  display: block;
+  width: 100%;
+}
+
+.music {
+  display: inline-flex;
+  padding-top: 0.5em;
+  width: 100%;
+}
+
+.music:nth-child(n + 2) {
+  border-top: #363636 solid 1px;
+}
+
+.music:hover {
+  background-color: #363636;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-control {
+    min-width: 20vw !important;
+  }
+
+  .mission-name {
+    width: 20%;
+  }
+}
