@@ -12,6 +12,10 @@ function Categories() {
   const [ showSearch, setShowSearch ] = useState(true);
 
   useEffect(() => {
+    document.title = "Music Collections - Categories";
+  }, []);
+
+  useEffect(() => {
     // Filter objects by keys matching searchValue
     if(searchValue === '') {
       setFilteredCategory(categorysAvailable);

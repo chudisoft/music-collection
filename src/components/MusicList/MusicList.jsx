@@ -24,6 +24,7 @@ function MusicList() {
   const countPerPage = 20;
 
   useEffect(() => {
+    document.title = "Music Collections";
     dispatch(fetchMusicList(category));
     setSequence(generateSequence(countPerPage));
   }, []);

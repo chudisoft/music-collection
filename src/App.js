@@ -68,7 +68,11 @@ function App() {
           <Outlet />
         </div>
         <footer>
-          <p>Copyright &copy; 2023 Chudisoft. All rights reserved.</p>
+          <p>
+            Copyright &copy; 2023&nbsp;
+            <a href="https://github.com/chudisoft">Chudisoft</a>
+            . All rights reserved.
+          </p>
         </footer>
       </div>
     </Router>
